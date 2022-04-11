@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <body class="sidebar-disabled navbar-fixed ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/vendor/js/moment.min.js"></script>
+
+
+  <div class="main-wrap">
+        <nav class="navigation">
+            <!-- START Navbar -->
+<div class="navbar-default navbar navbar-fixed-top">
+       <div class="container-fluid">
+
+           <div class="navbar-header">
+            <a class="current navbar-brand" href="starter.html">
+                <strong>Twitter Trend Analyzer</strong>
+            </a>
+
+          </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+
+            <!-- START Left Side Navbar -->
+            <ul class="nav navbar-nav navbar-left clearfix yamm">
+
+                <!-- START Switch Sidebar ON/OFF -->
+                <li id="sidebar-switch" class="hidden-xs">
+                    <a class="action-toggle-sidebar-slim" data-placement="bottom" data-toggle="tooltip" href="#" title="Slim sidebar on/off">
+                        <i class="fa fa-lg fa-bars fa-fw"></i>
+                    </a>
+                </li>
+                <!-- END Switch Sidebar ON/OFF -->
+
+                <li class="spin-search-box clearfix hidden-xs">
+                    <a href="#" class="pull-left">
+                        <i class="fa fa-search fa-lg icon-inactive"></i>
+                        <i class="fa fa-close  fa-lg icon-active"></i>
+                    </a>
+                    <div class="input-group input-group-sm pull-left p-10">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn active">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <!-- START Left Side Navbar -->
+
+            <!-- START Right Side Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Source</i></a></li>
+
+            </ul>
+            <!-- END Right Side Navbar -->
+        </div>
+
+    </div>
+</div>
+<!-- END Navbar -->
+ <!-- START Sidebars -->
+<aside class="navbar-default sidebar">
+
+    <div class="sidebar-overlay-head">
+        <img src="/images/spin-logo-inverted.png" alt="Logo" />
+        <a href="javascript:void(0)" class="sidebar-switch action-sidebar-close">
+            <i class="fa fa-times"></i>
+        </a>
+    </div>
+    <div class="sidebar-logo">
+        <img class="logo-default" src="/images/spin-logo-big-inverse-@2X.png" alt="Logo" width="53">
+        <img class="logo-slim" src="/images/spin-logo-slim.png" alt="Logo">
+    </div>
+
+    <div class="sidebar-content">
+        <!-- START Tree -->
+        <ul class="side-menu m-t-2">
+            <li  class='active'>
+                <a href="#" title="Page">
+                    <i class="fa fa-lg fa-file-o fa-fw"></i><span class="nav-label">Real-time Analyzer</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Apps">
+                    <i class="fa fa-files-o fa-fw fa-lg"></i><span class="nav-label">Real-time Geographics</span> <i class="fa arrow"></i>
+                </a>
+
+            </li>
+        </ul>
+        <!-- END Tree  -->
+
+        <div class="sidebar-default-visible"><hr></div>
+
+    </div>
+</aside>
+<!-- END Sidebars -->
+
+        </nav>
+
+        <div class="content">
+            <!-- START Sub-Navbar with Header only-->
+<div class="sub-navbar sub-navbar__header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header m-t-0">
+                    <h3 class="m-t-0">Starter HTML/CSS</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Sub-Navbar with Header only-->
+
+<% include ../partials/content.ejs %>
+
+
+        <!-- START Footer -->
+<footer>
+    <div class="container-fluid">
+        <p class="text-gray-dark">
+            © 2017 - Spring-2017, CMPE 220, Computer Engineering at San Jose State University
+        </p>
+    </div>
+</footer>
+<!-- END Footer -->
+
+    </div>
+    <link rel="stylesheet" href="/vendor/css/lib.min.css">
+
+      <!-- JS -->
+      <script src="/javascript/app/helpers.js"></script>
+      <script src="/javascript/app/layoutControl.js"></script>
+      <script src="/javascript/app/rightSidebar.js"></script>
+      <script src="/javascript/app/sidebar.js"></script>
+      <script src="/javascript/app/main.js"></script>
+</body>
+</html>

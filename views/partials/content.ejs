@@ -1,0 +1,136 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="javascript/peity-settings.js"></script>
+<script src="javascript/highchart-themes/highcharts&amp;highstock-theme.js"></script>
+
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="http://github.highcharts.com/modules/exporting.src.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://highcharts.github.io/export-csv/export-csv.js"></script>
+
+<script src="vendor/js/bootstrap-tagsinput.min.js"></script>
+<script src="vendor/js/moment.min.js"></script>
+<script src="vendor/js/daterangepicker.min.js"></script>
+<script src="javascript/date-range-picker-settings.js"></script>
+
+<div class="sub-navbar sub-navbar__header-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 sub-navbar-column">
+                <div class="sub-navbar-header">
+                    <h3>Twitter Trend Analyzer</h3>
+                </div>
+                <ol class="breadcrumb navbar-text navbar-right no-bg">
+                    <li class="current-parent">
+                        <a class="current-parent" href="index.html">
+                            <i class="fa fa-fw fa-home"></i>
+                        </a>
+                    </li>
+                    <li  class="active">
+                        <a>
+                            Twitter Trend Analyzer
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Sub-Navbar with Header and Breadcrumbs-->
+
+<div class="container" id="daterangepicker-container">
+
+    <!-- START Content -->
+    <div class="row">
+        <div class="col-lg-12">
+
+          <div class="panel panel-default shadow-box b-a-0">
+              <div class="panel-body">
+
+                  <form class="form-inline" name="form1" id="form1">
+                      <div class="form-group">
+                        <!--<label for="date" class="m-r-1">Type : <div id="speed"></div></label>
+                        <select class="form-control" id="search_type">
+                                <option value="YYYYMMDD">Daily</option>
+                                <option value="YYYYMMDDh">Hourly</option>
+                                <option value="YYYYMMDDhmm" >Minute</option>
+                                <option value="YYYYMMDDhmmss" selected>Second</option>
+                            </select>-->
+                      </div>
+                      <div class="form-group">
+                          <label for="keyword" class="m-r-1">Keyword</label>
+                          <input type="text" class="form-control" name="keyword" id="keyword" value="Samsung">
+                      </div>
+
+                      <button type="button" id="btn_start" class="btn btn-primary">Start</button>
+                      <button type="button" id="btn_stop" class="btn btn-danger" disabled>Stop</button>
+
+                      <a id="getCsv" href="#" class="btn btn-warning">download</a>
+
+                  </form>
+
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- END Content -->
+    <!-- START ROWs #1 -->
+    <div class="row m-t-1 m-b-2">
+
+      <div class="col-lg-8">
+        <div class="hr-text hr-text-left m-b-0">
+            <h6 class="text-white"><strong>Realtime Trend Analyzer</strong></h6>
+        </div>
+        <div class="panel panel-default shadow-box b-a-0">
+
+            <div class="panel-body">
+              <div class="highcharts-line-overview"></div>
+            </div>
+        </div>
+        <div class="hr-text hr-text-left m-b-0">
+            <h6 class="text-white"><strong>Realtime Trend Map</strong></h6>
+        </div>
+        <div id="map" style="width:100%;height:500px;"></div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-default shadow-box b-a-0">
+
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-lg-6">
+                    <i class="fa fa-flash fa-2x fa-fw text-soft-purple"></i>
+                </div>
+
+                <div class="col-lg-6 text-right">
+                    <p class="m-b-0  text-gray-light">Tweets</p>
+                    <h1 class="f-w-300  m-t-0 m-b-0"><div id="no-of-tweets">0</div></h1>
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="block social-block social-twitter">
+          <div class="hr-text hr-text-left m-b-0">
+              <h6 class="text-white"><strong>Search Result </strong></h6>
+          </div>
+          <div id="search-result">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END ROWs #1 -->
+
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9wfYjUO3sAEH9aJIgxCiqq3mu2HW28N0&libraries=visualization&callback=initMap">
+</script>
